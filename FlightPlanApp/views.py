@@ -38,5 +38,5 @@ class FlightPlanApi(APIView):
         flightdata['body']['flightPlan']['filing_time'] = date_time
         flightplan.data = flightdata
         flightplan.save()
-        return JsonResponse({ "message": "UPDATE FLIGHT PLAN" , "body":flightplan.data }) 
+        return JsonResponse({ "message": "UPDATE FLIGHT PLAN" , "flight_plan_id": pk, "body":flightplan.data }) 
 
